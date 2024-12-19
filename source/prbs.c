@@ -156,7 +156,7 @@ void prbs8_period(uint8_t start)
                             (a >> 3)                            
                             ) & 1) ) & mask;
 
-        //printf("%x\n", a);
+        printf("0x%x\n", a);
         
         if (a == start) 
         {
@@ -176,7 +176,7 @@ void prbs15_period(uint16_t start)
         uint8_t next = (((a >> 14) ^ (a >> 13)) & 1);
         a = ((a << 1) | next) & mask;
         
-        //printf("%x\n", a);
+        printf("%x\n", a);
         
         if (a == start) 
         {
@@ -199,7 +199,7 @@ void prbs16_period(uint16_t start)
                             (a >> 3)                            
                             ) & 1) ) & mask;
         
-        //printf("0x%.4X\n", a);
+        printf("0x%.4X\n", a);
         
         if (a == start) 
         {
@@ -222,7 +222,7 @@ void prbs24_period(uint16_t start)
                             (a >> 16)                            
                             ) & 1) ) & mask;
         
-        //printf("0x%.4X\n", a);
+        printf("0x%.4X\n", a);
         
         if (a == start) 
         {
@@ -245,7 +245,7 @@ void prbs32_period(uint32_t start)
                             (a >> 0)                            
                             ) & 1) ) & mask;
         
-        //printf("0x%.4X\n", a);
+        printf("0x%.4X\n", a);
         
         if (a == start) 
         {
@@ -254,3 +254,5 @@ void prbs32_period(uint32_t start)
         }
     }    
 }
+
+
